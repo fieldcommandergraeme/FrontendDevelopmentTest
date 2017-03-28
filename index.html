@@ -37,6 +37,8 @@
     <ion-pane>
       <ion-header-bar class="bar-stable">
         <h1 class="title">Basic Information</h1>
+        <p>Get your UniPanda</p>
+        <img src="img\1f43c.png" style="width: 10px; height: 10px;"/>
       </ion-header-bar>
       <ion-content>
 
@@ -44,37 +46,37 @@
 
           <label class="item item-input">
             <span class="input-label">Name</span>
-            <input type = "text" ng-model="newusr.name">
+            <input class = "button button-icon" type = "text"  ng-model="newusr.name">
           </label>
 
           <label class= "item item-input">
             <span class="input-label">DOB</span>
-            <ion-datetime displayFormat="MM/DD/YYYY" [(ngModel)]="newusr.dob"></ion-datetime>
+            <ion-datetime class = "button button-icon" displayFormat="MM/DD/YYYY" [(ngModel)]="newusr.dob"></ion-datetime>
           </label>
 
           <label class="item item-input">
             <span class="input-label">Gender</span>
-            <input class = "button button-icon" ng-click="setGender()" value="{{choice.value}}" ng-model="newusr.gender">
+            <input class = "button button-icon" ng-click="setGender()" ng-model="newusr.gender" placeholder="{{choice.value}}" >
           </label>
 
           <label class="item item-input">
             <span class="input-label">Nationality</span>
-            <input class = "button" ng-click="showNationality()" value="{{choice.natValue}}" ng-model="newusr.nationality">
+            <input class = "button button-icon" ng-click="showNationality()" placeholder="{{choice.natValue}}" ng-model="newusr.nationality">
           </label>
 
           <label class="item item-input">
             <span class="input-label">Current School</span>
-            <input type = "text" ng-model="newusr.currentSchool">
+            <input class = "button button-icon" type = "text" ng-model="newusr.currentSchool">
           </label>
 
           <label class="item item-input">
             <span class="input-label">Current Major</span>
-            <input type = "text" ng-model="newusr.currentMajor">
+            <input class = "button button-icon" type = "text" ng-model="newusr.currentMajor">
           </label>
 
-          <label class="item item-input">
-            <span class="input-label">Current GPA</span>
-            <input type="number" ng-model="newusr.currentGPA" min="0" inputmode="numeric" pattern"[0-9]*">
+          <label class="item item-input ">
+            <span class="input-label ">Current GPA</span>
+            <input class = "button button-icon" type="number" ng-model="newusr.currentGPA" min="0" inputmode="numeric" pattern"[0-9]*">
           </label>
 
           <a class="button icon icon-right ion-chevron-right" ng-click="addUsr()"  href="#/tab">Continue</a>
