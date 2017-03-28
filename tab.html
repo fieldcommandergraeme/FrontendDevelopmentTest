@@ -1,0 +1,36 @@
+//chips for the second tab
+
+<script id="views\tab.html" type="text/ng-template">
+
+  <ion-pane>
+    <ion-header-bar class="bar-stable">
+      <h1 class="title">Tell us more about you</h1>
+      <p>Help us personalise your assistant</p>
+    </ion-header-bar>
+
+
+  <ion-view view-title="Facts">
+    <ion-content ng-controller="FrontEndDev">
+
+      //chips for label
+      <div ng-model="FrontEndDev.label" ng-model= name="labelName" md-removable"FrontEndDev.removable" md-max-chips="10" placeholder="Choose your own label">
+        <md-chip-template>
+          <strong>{{$chip}}</strong>
+        </md-chip-template>
+      </div>
+
+      //error message when maximum number of chips have been reached
+      <div class="errors" ng-messages="labelName.$error">
+        <div ng-message="md-max-chips">Maximum number of chips reached.</div>
+      </div>
+
+
+      <div ng-model="FrontEndDev.label" ng-model= name="labelName" md-removable"FrontEndDev.removable" md-max-chips="10" placeholder="Choose your own label">
+        <md-chip-template>
+          <strong>{{$chip}}</strong>
+        </md-chip-template>
+      </div>
+
+<a class="button icon icon-right ion-chevron-right" ng-click="addUsr()"  href="#/home">Continue</a>
+</ion-content>
+</script>
